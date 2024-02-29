@@ -51,6 +51,7 @@ struct DetailView: View {
             }
             
         }
+        .background(Color.theme.background.ignoresSafeArea())
         .navigationTitle(vm.coin.name)
         .toolbar {
             ToolbarItem(placement: .navigationBarTrailing) {

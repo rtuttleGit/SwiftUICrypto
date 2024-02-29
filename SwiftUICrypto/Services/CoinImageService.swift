@@ -22,14 +22,16 @@ class CoinImageService {
     
     private func getCoinImage() {
         guard let url = URL(string: coin.image) else { return }
+        print("url: \(url)")
         
-//        imageSubscription = NetworkingManager.download(url: url)
-//            .tryMap({ (data) -> UIImage? in
-//                return UIImage(data: data)
-//            })
-//            .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] returnImage in
-//                self?.image = returnImage
-//                self?.imageSubscription?.cancel()
-//            })
+        imageSubscription = NetworkingManager.download(url: url)
+            .tryMap({ (data) -> UIImage? in
+                return UIImage(data: data)
+            })
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: NetworkingManager.handleCompletion, receiveValue: { [weak self] returnImage in
+                self?.image = returnImage
+                self?.imageSubscription?.cancel()
+            })
     }
 }

@@ -14,9 +14,14 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                coinGeckoSection
-                applicationSection
+            ZStack {
+                //background
+                Color.theme.background
+                    .ignoresSafeArea()
+                List {
+                    coinGeckoSection
+                    applicationSection
+                }
             }
             .listStyle(GroupedListStyle())
             .navigationTitle("Settings")

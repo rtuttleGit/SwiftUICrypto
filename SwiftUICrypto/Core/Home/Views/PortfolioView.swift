@@ -24,9 +24,9 @@ struct PortfolioView: View {
                     if selectedCoin != nil {
                         portfolioInputSection
                     }
-                    
                 }
             }
+            .background(Color.theme.background.ignoresSafeArea())
             .navigationTitle("Edit Portfolio")
             .toolbar(content: {
                 ToolbarItem(placement: .navigationBarLeading) {
