@@ -28,10 +28,8 @@ class CoinImageViewModel: ObservableObject {
     func addSubscribers() {
         dataService.$image
             .sink { [weak self] (response) in
-                print("response: \(response)")
                 self?.isLoading = false
             } receiveValue: { [weak self] returnedImage in
-                print("Fox3")
                 self?.image = returnedImage
             }
             .store(in: &cancellables)

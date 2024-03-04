@@ -125,7 +125,7 @@ extension PortfolioView {
             Image(systemName: "checkmark")
                 .opacity(showCheckmark ? 1.0 : 0.0)
             Button(action: {
-                showCheckmark.toggle()
+                saveButtonPressed()
             }, label: {
                 Text("Save".uppercased())
             })
