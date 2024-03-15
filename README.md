@@ -5,7 +5,7 @@ This is a crypto app to demonstrate modern swift and swiftUI capabilities. The a
 
 * Frameworks - Foundation, SwiftUI, Combine, Core Data
 * Animations - splash screen, top navigation buttons, and historcal data displayed in graph
-* Data persistence - Core Data
+* Data persistence - Core Data, Image caching
 * Networking - Combine
 * Arhitecture - MVVM
 * App Theme - Compatible with iPhone's light and dark mode. Code uses style sheet to dynamically change app theme colors if needed
